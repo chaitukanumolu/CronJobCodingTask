@@ -23,7 +23,12 @@ public class CronExpressionEvaluator {
         //Day of week
         arguments.add(ExpressionFactory.getCronExpression(TemporalEnum.DAY_OF_WEEK, expressions.get(4)));
         //Program to execute
-        arguments.add(new Program(expressions.get(5)));
+        StringBuffer programString = new StringBuffer();
+        for(int i=5; i<expressions.size(); i++){
+            programString.append(expressions.get(i));
+            programString.append(" ");
+        }
+        arguments.add(new Program(programString.toString()));
 
         return arguments;
     }
