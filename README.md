@@ -28,3 +28,8 @@ CronExpression's getExpression() gives the exact output required like "minute 0 
 CronExpression needs TemporalEnum so that it can get starting and the ending values of that particular time type,
 for eg, minutes starts at 0 and ends at 59, hour starts at 0 and ends at 23 and day of week 1 to 7.
 
+
+Tech Debt:
+1. Exptensive Test cases covering different temporal cases with expression is needed.
+2. Seconds is not introduced.
+3. There are other cron expressions types like ? etc.
